@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#57BBCE ,#F2F2F4 ,#CA5135 );
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+.content-form{
+    padding: 5px;
+    margin: 6% auto;
+    position: relative;
+    background-color: white;
+    height: 480px;
+    overflow: hidden;
+    width: 380px;
+}
+.bottun-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 10px #ff61241f;
+    border-radius: 30px;
+}
+.tog-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.content-icon{
+    margin: 30px auto;
+    text-align: center;
+}
+.content-icon .aa{
+    width: 60px;
+    color:cadetblue;
+    font-size: 30px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-gr{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.in-fl{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.sbm-btn{
+    width: 85%;
+    padding: 10px 30px ;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 35px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color:#777;
+    font-size: 12px;
+    bottom: 67px;
+    position: absolute;
+}
+#login{
+    left: 450px;
+}
+#registor{
+    left: 50px;
+}

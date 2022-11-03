@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;;
+}
+
+/* Navigation */
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #344953;
+}
+.nav-container{
+    padding: 0 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Logo */
+
+.navbar  .logo-container{
+    flex: 2;
+}
+.navbar .logo-container a{text-decoration: none;}
+.navbar .logo{
+    letter-spacing: -3px;
+    font-style: italic;
+    word-spacing: -3px;
+    font-size: 30px;
+}
+.navbar #f1 ,#f3{
+    color: red;
+}
+.navbar #f2{
+    color: blue;
+}
+
+/* menu */
+
+.navbar .menu-container{
+    flex: 6;
+}
+.navbar .menu-list{
+    list-style: none;
+    /* justify-content: space-around; */
+}
+.navbar .menu-list-item{
+    background-color: rgb(19, 7, 83);
+    margin-right: 25px;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 30px;
+    border: 0;
+}
+.navbar .menu-list-item a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.navbar .menu-list-item:hover{
+    font-style: italic;
+    background-color: #0D0D40;
+    border: 2px dotted rgb(173, 173, 2)
+}
+/* Profile */ 
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+.pro-img-con{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.pro-txt-con{
+    margin: 0 20px;
+
+}
+
+/* dark-btn */
+.navbar .darkmo{
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.navbar .dark-icon{
+    color: goldenrod;
+}
+.navbar .dark-ball{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 1px;
+    /* 40 - 18 = 22px with display flex icon have 19 px so if you put 1px right it will hover the the sun icon  */
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s ease all;
+    opacity: .7;
+}
+
+
+/* sidebar */
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: #202021;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.sidebar .left-menu-list{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 42px;
+}
+
+/* content */
+.content{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+.content-container{
+    margin-left: 50px;
+}
+ .featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+ .featured-title{
+    width: 200px;
+}
+ .featured-desc{
+    width: 450px;
+    color: lightgray;
+    margin: 30px 0;
+}
+/* for the button  */
+.featured-btn{
+    background-color: #4dbf00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgb(202, 13, 13);
+    outline: none;
+    cursor: pointer;
+}
+
+/* movie-list */
+.movie-list-container{
+    padding: 0 20px;
+}
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all .8s ease-in-out;
+}
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+.movie-list-item:hover .movie-li-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.movie-list-item:hover .movie-li-tit,
+.movie-list-item:hover .movie-li-desc,
+.movie-list-item:hover .movie-li-btn{
+    opacity: 1;
+}
+.movie-list-container .movie-li-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all .7s ease-in-out;
+}
+.movie-li-tit{
+    position: absolute;
+    padding: 0 10px;
+    top: 10%;
+    left: 50px;
+    font-weight: bold;
+    font-size: 32px;
+    background-color: #333;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+.movie-li-desc{
+    position: absolute;
+    padding: 10px;
+    top: 30%;
+    width: 230px;
+    left: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #333;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+.movie-li-btn{
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+/* arrow */
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.movie-list-wrapper .arrow{
+    position: absolute;
+    font-size: 120px;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: .5;
+    cursor: pointer;
+}
+
+/* darkmode */
+
+.navbar.active{
+    background-color: white;
+}
+.sidebar.active{
+    background-color: white;
+}
+.left-menu-list.active{
+    color: black;
+}
+.movie-list-title.active{
+    color: black;
+}
+.content.active{
+    background-color: white;
+}
+.dark-ball.active{
+    transform: translateX(-20px);
+}
+.darkmo.active{
+    background-color: black;
+}
+
+/* Make it Responsive  */
+
+@media  (max-width:940px){
+    .navbar .menu-container{
+        display: none;
+    }
+}
+@media (max-width:600px){
+    .navbar .profile-container{
+        overflow: hidden;
+        display: none;
+    }
+}
